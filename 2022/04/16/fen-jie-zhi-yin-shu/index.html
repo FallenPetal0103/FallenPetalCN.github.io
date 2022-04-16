@@ -477,14 +477,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    963
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -508,27 +508,27 @@
 <h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><p>我们小学就学过（指质因数，不是数论），质因数在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E8%AE%BA/3700">数论</a>里是指能整除给定正<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B4%E6%95%B0">整数</a>的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B4%A8%E6%95%B0/263515">质数</a>，质因数分解就是把一个合数用质因数<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%9B%B8%E4%B9%98/10779094">相乘</a>的形式表示出来。</p>
 <p>例如：8=2×2×2               36=2×2×3×3               90=2×3×3×5               120=2×2×2×3×5</p>
 <h4 id="程序分析"><a href="#程序分析" class="headerlink" title="程序分析"></a>程序分析</h4><p>对正整数i进行分解质因数，应先找到一个最小的质数k，然后按下述步骤完成：<br>（1）如果质数k恰等于i，则说明分解质因数的过程已经结束，打印出即可。<br>（2）如果i&gt;k，但i能被k整除，则应打印出k的值，并用i除以k的商，作为新的正整数i，重复执行第一步。<br>（3）如果i不能被k整除，则用k+1作为k的值，重复执行第一步。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><p>  1              #include&lt;bits/stdc++.h&gt;</p>
-<p>  2              using namespace std;</p>
-<p>  3              int main(){</p>
-<p>  4                int i,k;</p>
-<p>  5                cin&gt;&gt;i;</p>
-<p>  6                cout&lt;&lt;i&lt;&lt;”=”;</p>
-<p>  7                for(k=2;k&lt;=i;k++){</p>
-<p>  8                  while(i!=k&amp;&amp;i%k==0){</p>
-<p>  9                    cout&lt;&lt;k&lt;&lt;”*”;</p>
-<p>10                     i=i/k;</p>
-<p>11                   }</p>
-<p>12                   if(i==k){</p>
-<p>13                     cout&lt;&lt;k;</p>
-<p>14                   }</p>
-<p>15                 }</p>
-<p>16                 system(“pause”);</p>
-<p>17                 return 0;</p>
-<p>18               }</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><p>#include&lt;bits/stdc++.h&gt;</p>
+<p>using namespace std;</p>
+<p>int main(){</p>
+<p>  int i,k;</p>
+<p>  cin&gt;&gt;i;</p>
+<p>  cout&lt;&lt;i&lt;&lt;”=”;</p>
+<p>  for(k=2;k&lt;=i;k++){</p>
+<p>​    while(i!=k&amp;&amp;i%k==0){</p>
+<p>​      cout&lt;&lt;k&lt;&lt;”*”;</p>
+<p>​      i=i/k;</p>
+<p>​    }</p>
+<p>​    if(i==k){</p>
+<p>​      cout&lt;&lt;k;</p>
+<p>​    }</p>
+<p>  }</p>
+<p>  system(“pause”);</p>
+<p>  return 0;</p>
+<p>}</p>
 <p>我是用VS Code进行编译的，编译器使用的是MinGW，不同版本编译器中头文件（VS2022的库中不包含&lt;bits/stdc++.h&gt;）与system(“pause”)（Dev-C++最新版本中不需要写这一行）可能略有不同。</p>
 <p>最初的程序中我添加了判断i是否为质数，以及是否大于等于2的代码，但最后被我删了，原因是质数的输出依然是它自身，小于2的数没有输出，如果再对它们进行其他输出的话无意义，而且会使代码显得冗杂。</p>
-<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>  1               num = input()<br>  2               if num.isdigit():<br>  3                   num = int(num)<br>  4               def isZhishu(num):<br>  5                   for i in range(2, num):<br>  6                       if num % i == 0:<br>  7                           return False<br>  8                   else:<br>  9                       return True<br>10               l0 = []<br>11               def fenjie(num):<br>12                   i = 2<br>13                   while i &lt; num + 1:<br>14                       if num % i == 0:<br>15                           l0.append(i)<br>16                           num /= i<br>17                       else:<br>18                           i += 1<br>19               if not isZhishu(num):<br>20                   fenjie(num)<br>21                   str0 = ‘’<br>22                   for i in l0:<br>23                       str0 = str0 + str(i) + “*”<br>24                   str0 = str0[:-1]<br>25                   print(“%s=%s” % (num, str0))</p>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>num = input()<br>if num.isdigit():<br>    num = int(num)<br>def isZhishu(num):<br>    for i in range(2, num):<br>        if num % i == 0:<br>            return False<br>    else:<br>        return True<br>l0 = []<br>def fenjie(num):<br>    i = 2<br>    while i &lt; num + 1:<br>        if num % i == 0:<br>            l0.append(i)<br>            num /= i<br>        else:<br>            i += 1<br>if not isZhishu(num):<br>    fenjie(num)<br>    str0 = ‘’<br>    for i in l0:<br>        str0 = str0 + str(i) + “*”<br>    str0 = str0[:-1]<br>    print(“%s=%s” % (num, str0))</p>
 <p>我们班那位oi大佬学的是C++，他在朋友圈转发了一个Python代码（不是他写的），那个代码使用的是MIT公开课中教授提到的试探性求解法，也就是Guess-try方法，但运行起来会报错，而且它的逻辑我至今也没看懂。无奈之下，我只得自己试着写了写，在网上找了些资料，也算是磕磕绊绊地写完了。</p>
 <h2 id="网站规划"><a href="#网站规划" class="headerlink" title="网站规划"></a>网站规划</h2><p>今后会时不时地更新，目前想做的方面有：</p>
 <p>• 将首页manner图挂到jsDelivr上（在手机上打开时，manner加载得真的太太太太太慢了）</p>
@@ -972,7 +972,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">1k</span>
+                        class="white-color">963</span>
             
             
             
