@@ -6,7 +6,7 @@
   <link href="https://y1ran.github.io/atom.xml" rel="self"/>
   
   <link href="https://y1ran.github.io/"/>
-  <updated>2022-03-25T13:24:59.074Z</updated>
+  <updated>2022-04-16T08:46:06.853Z</updated>
   <id>https://y1ran.github.io/</id>
   
   <author>
@@ -17,23 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://y1ran.github.io/2022/03/25/hello-world/"/>
-    <id>https://y1ran.github.io/2022/03/25/hello-world/</id>
-    <published>2022-03-25T13:24:59.074Z</published>
-    <updated>2022-03-25T13:24:59.074Z</updated>
+    <title>分解质因数</title>
+    <link href="https://y1ran.github.io/2022/04/16/fen-jie-zhi-yin-shu/"/>
+    <id>https://y1ran.github.io/2022/04/16/fen-jie-zhi-yin-shu/</id>
+    <published>2022-04-15T16:00:00.000Z</published>
+    <updated>2022-04-16T08:46:06.853Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;p&gt;这是我的第一篇博客，想了很久也不知道该发些什么。像我这种三年没敲代码的小蒟蒻，最近做的”康复训练“实在是不够格。前几周数学老师留了几页数学书上的题，有一道是这样的：”使用信息技术手段进行试验：尝试在复数集中对实系数多项式进行因式分解，观察并记录所发现的规律。”（这道题在必修</summary>
         
       
     
     
     
+    
+    <category term="C++" scheme="https://y1ran.github.io/tags/C/"/>
+    
+    <category term="Python" scheme="https://y1ran.github.io/tags/Python/"/>
     
   </entry>
   
