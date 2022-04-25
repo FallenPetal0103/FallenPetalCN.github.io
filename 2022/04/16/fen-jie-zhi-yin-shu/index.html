@@ -470,7 +470,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-19
+                    2022-04-25
                 </div>
                 
 
@@ -512,25 +512,25 @@
 <p>例如：8=2×2×2               36=2×2×3×3               90=2×3×3×5               120=2×2×2×3×5</p>
 <h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><h4 id="Pollard-Rho算法"><a href="#Pollard-Rho算法" class="headerlink" title="Pollard Rho算法"></a>Pollard Rho算法</h4><p>1975年，John M. Pollard提出了第二种分解质因数的方法，Pollard Rho快速分解质因数。该算法时间复杂度为O（n^(1/4)）。</p>
 <p>对正整数i进行分解质因数，应先找到一个最小的质数k，然后按下述步骤完成：<br>（1）如果质数k恰等于i，则说明分解质因数的过程已经结束，打印出即可。<br>（2）如果i&gt;k，但i能被k整除，则应打印出k的值，并用i除以k的商，作为新的正整数i，重复执行第一步。<br>（3）如果i不能被k整除，则用k+1作为k的值，重复执行第一步。</p>
-<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main(){
-    int i,k,m;
-    cin&gt;&gt;i;
-    cout&lt;&lt;i&lt;&lt;"=";
-    for(k=2;k&lt;=i;k++){
-       while(i!=k&amp;&amp;i%k==0){
-           cout&lt;&lt;k&lt;&lt;"*";
-           i=i/k;
-        }
-    }   
-    m=k-1;
-    if(i==m){
-        cout&lt;&lt;m;
-    }
-    system("pause");
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
+    cin<span class="token operator">&gt;&gt;</span>i<span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span>i<span class="token operator">&lt;&lt;</span><span class="token string">"="</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>k<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>k<span class="token operator">&lt;=</span>i<span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">!=</span>k<span class="token operator">&amp;&amp;</span>i<span class="token operator">%</span>k<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+           cout<span class="token operator">&lt;&lt;</span>k<span class="token operator">&lt;&lt;</span><span class="token string">"*"</span><span class="token punctuation">;</span>
+           i<span class="token operator">=</span>i<span class="token operator">/</span>k<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>   
+    m<span class="token operator">=</span>k<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">==</span>m<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cout<span class="token operator">&lt;&lt;</span>m<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>最初的程序中我添加了判断i是否为质数，以及是否大于等于2的代码，但最后被我删了，原因是质数的输出依然是它自身，小于2的数没有输出，如果再对它们进行其他输出的话无意义，而且会使代码显得冗杂。</p>
 <h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><h4 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">num <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
