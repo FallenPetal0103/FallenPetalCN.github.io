@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分解质因数, YiRan&#39;s Home">
-    <meta name="description" content="这是我的第一篇博客，想了很久也不知道该发些什么。像我这种三年没敲代码的小蒟蒻，最近做的”康复训练“实在是不够格。前几周数学老师留了几页数学书上的题，有一道是这样的：”使用信息技术手段进行试验：尝试在复数集中对实系数多项式进行因式分解，观察并">
+    <meta name="keywords" content="一点小感想, YiRan&#39;s Home">
+    <meta name="description" content="一点小感想这是我的第一篇博客，想了很久也不知道该发些什么。像我这种三年没敲代码的蒟蒻，最近做的“康复训练”实在是不够格。今年3月份，长春开始封城，机缘巧合下，我再次拾起了C++。前几天心血来潮登录我的当当账号，看到了小时候罗列的立志在大学前">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分解质因数 | YiRan&#39;s Home</title>
+    <title>一点小感想 | YiRan&#39;s Home</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -322,12 +322,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">分解质因数</h1>
+                    <h1 class="description center-align post-title">一点小感想</h1>
                 </div>
             </div>
         </div>
@@ -443,12 +443,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">随笔</span>
                             </a>
                         
                     </div>
@@ -463,28 +459,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-05-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-25
+                    2022-05-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    955
+                    479
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -507,71 +503,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这是我的第一篇博客，想了很久也不知道该发些什么。像我这种三年没敲代码的小蒟蒻，最近做的”康复训练“实在是不够格。前几周数学老师留了几页数学书上的题，有一道是这样的：”使用信息技术手段进行试验：尝试在复数集中对实系数多项式进行因式分解，观察并记录所发现的规律。”（这道题在必修二数学书的第81页）我尝试做了一下，这道题怎么也算是道提升+/省选-的蓝题了，便先放一放。次日，我们班一位oi奆佬在朋友圈发了份Python的分解质因数的代码，我也用Python自己写了一份（毕生所学），然后又在网上找了找，用C++写这道题的寥寥无几，那我就来水（划掉，发）一篇博客，算是终于迈出千里之行的第一步了。</p>
-<h2 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h2><p>我们小学就学过（指质因数，不是数论），质因数在<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E8%AE%BA/3700">数论</a>里是指能整除给定正<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B4%E6%95%B0">整数</a>的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B4%A8%E6%95%B0/263515">质数</a>，分解质因数就是把一个合数用质因数<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%9B%B8%E4%B9%98/10779094">相乘</a>的形式表示出来。</p>
-<p>例如：8=2×2×2               36=2×2×3×3               90=2×3×3×5               120=2×2×2×3×5</p>
-<h2 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h2><h4 id="Pollard-Rho算法"><a href="#Pollard-Rho算法" class="headerlink" title="Pollard Rho算法"></a>Pollard Rho算法</h4><p>1975年，John M. Pollard提出了第二种分解质因数的方法，Pollard Rho快速分解质因数。该算法时间复杂度为O（n^(1/4)）。</p>
-<p>对正整数i进行分解质因数，应先找到一个最小的质数k，然后按下述步骤完成：<br>（1）如果质数k恰等于i，则说明分解质因数的过程已经结束，打印出即可。<br>（2）如果i&gt;k，但i能被k整除，则应打印出k的值，并用i除以k的商，作为新的正整数i，重复执行第一步。<br>（3）如果i不能被k整除，则用k+1作为k的值，重复执行第一步。</p>
-<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> i<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
-    cin<span class="token operator">&gt;&gt;</span>i<span class="token punctuation">;</span>
-    cout<span class="token operator">&lt;&lt;</span>i<span class="token operator">&lt;&lt;</span><span class="token string">"="</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span>k<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>k<span class="token operator">&lt;=</span>i<span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-       <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">!=</span>k<span class="token operator">&amp;&amp;</span>i<span class="token operator">%</span>k<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-           cout<span class="token operator">&lt;&lt;</span>k<span class="token operator">&lt;&lt;</span><span class="token string">"*"</span><span class="token punctuation">;</span>
-           i<span class="token operator">=</span>i<span class="token operator">/</span>k<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>   
-    m<span class="token operator">=</span>k<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">==</span>m<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        cout<span class="token operator">&lt;&lt;</span>m<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h4 id="一点小感想"><a href="#一点小感想" class="headerlink" title="一点小感想"></a>一点小感想</h4><p>这是我的第一篇博客，想了很久也不知道该发些什么。像我这种三年没敲代码的蒟蒻，最近做的“康复训练”实在是不够格。今年3月份，长春开始封城，机缘巧合下，我再次拾起了C++。前几天心血来潮登录我的当当账号，看到了小时候罗列的立志在大学前读完的书单，从入门的语法书、编程思想，到进阶的泛型编程、模板元编程，毫无疑问，我肯定是读不完的，时至今日我那本砖头般厚重的C++ Primer也才读了一半。不过，如果我能在大学毕业前读完这些书，那也是极好的（挖坑一时爽）。如果有机会，我希望在大学期间能尝试一下ACM竞赛，万一就拿了金牌呢（逃）。</p>
+<p>不过，以上都是些后话，目前最要紧的是提升课内成绩。我望着书桌上砖头般厚重的五一作业，不由得陷入了对人生和社会的大思考。立足当下，那就在此祝自己越来越好吧。希望自己的成绩越来越优秀，在编程的道路上越走越远，越来越帅（？），能一直朝着心中理想的自己前进。</p>
+<p><strong>希望我能成为一个真正博学的人。</strong></p>
+<p>顺便放上一首自己很喜欢的音乐，这首歌也陪伴我度过了初三的备考时光。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1294165089&amp;auto=1&amp;height=66"></iframe>
 
-<p>最初的程序中我添加了判断i是否为质数，以及是否大于等于2的代码，但最后被我删了，原因是质数的输出依然是它自身，小于2的数没有输出，如果再对它们进行其他输出的话无意义，而且会使代码显得冗杂。</p>
-<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><h4 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">num <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">if</span> num<span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    num <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
-<span class="token keyword">def</span> <span class="token function">isZhishu</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> num<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">if</span> num <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token boolean">False</span>
-    <span class="token keyword">else</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token boolean">True</span>
-l0 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token keyword">def</span> <span class="token function">fenjie</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    i <span class="token operator">=</span> <span class="token number">2</span>
-    <span class="token keyword">while</span> i <span class="token operator">&lt;</span> num <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span>
-        <span class="token keyword">if</span> num <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
-            l0<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-            num <span class="token operator">/=</span> i
-        <span class="token keyword">else</span><span class="token punctuation">:</span>
-            i <span class="token operator">+=</span> <span class="token number">1</span>
-<span class="token keyword">if</span> <span class="token keyword">not</span> isZhishu<span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    fenjie<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
-    str0 <span class="token operator">=</span> <span class="token string">''</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> l0<span class="token punctuation">:</span>
-        str0 <span class="token operator">=</span> str0 <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"*"</span>
-    str0 <span class="token operator">=</span> str0<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s=%s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>num<span class="token punctuation">,</span> str0<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>我们班那位oi大佬学的是C++，他在朋友圈转发了一个Python代码（不是他写的），那个代码使用的是MIT公开课中教授提到的试探性求解法，也就是Guess-try方法，但运行起来会报错，而且它的逻辑我至今也没看懂。无奈之下，我只得自己试着写了写，在网上找了些资料，也算是磕磕绊绊地写完了。</p>
-<h2 id="网站规划"><a href="#网站规划" class="headerlink" title="网站规划"></a>网站规划</h2><p>今后会时不时地更新，目前想做的方面有：</p>
+<h4 id="网站规划"><a href="#网站规划" class="headerlink" title="网站规划"></a>网站规划</h4><p>下次更新得猴年马月了，目前连基本的语法也没复习完，更不用提稍微复杂些的算法了，做的题也没有什么难度。等到暑假我买一本算法书，自己啃啃再说吧。目前想做的方面有：</p>
 <ul>
-<li><p>将首页manner图挂到图床上（在手机上打开时，manner加载得真的太太太太太慢了）</p>
-</li>
-<li><p>将引擎更换为速度更快的hexo-renderer-markdown-it</p>
-</li>
-<li><p>添加友链（如果有人愿意的话）</p>
-</li>
-<li><p>新增Valine留言板</p>
-</li>
-<li><p>添加百度推送（等我发表一些比较有价值的文章时）</p>
-</li>
+<li>将首页图挂到图床上</li>
+<li>添加评论区</li>
+<li>添加页面宠物</li>
 </ul>
 
                 
@@ -599,7 +541,7 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://y1ran.github.io/2022/04/16/fen-jie-zhi-yin-shu/">https://y1ran.github.io/2022/04/16/fen-jie-zhi-yin-shu/</a>
+                    <a href="https://y1ran.github.io/2022/05/01/yi-dian-xiao-gan-xiang/">https://y1ran.github.io/2022/05/01/yi-dian-xiao-gan-xiang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -637,12 +579,8 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
-                                </a>
-                            
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">随笔</span>
                                 </a>
                             
                         </div>
@@ -695,13 +633,13 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/04/16/fen-jie-zhi-yin-shu/">
+                <a href="/2022/05/01/yi-dian-xiao-gan-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="分解质因数">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="一点小感想">
                         
-                        <span class="card-title">分解质因数</span>
+                        <span class="card-title">一点小感想</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -712,7 +650,7 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-01
                             </span>
                         <span class="publish-author">
                             
@@ -726,12 +664,8 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
@@ -745,13 +679,13 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/16/fen-jie-zhi-yin-shu/">
+                <a href="/2022/05/01/yi-dian-xiao-gan-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="分解质因数">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="一点小感想">
                         
-                        <span class="card-title">分解质因数</span>
+                        <span class="card-title">一点小感想</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -762,7 +696,7 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-01
                             </span>
                         <span class="publish-author">
                             
@@ -776,12 +710,8 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
                 </div>
@@ -1009,7 +939,7 @@ l0 <span class="token operator">=</span> <span class="token punctuation">[</span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">955</span>
+                        class="white-color">479</span>
             
             
             

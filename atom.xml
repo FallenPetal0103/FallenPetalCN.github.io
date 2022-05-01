@@ -6,7 +6,7 @@
   <link href="https://y1ran.github.io/atom.xml" rel="self"/>
   
   <link href="https://y1ran.github.io/"/>
-  <updated>2022-04-25T05:08:24.479Z</updated>
+  <updated>2022-05-01T13:36:46.241Z</updated>
   <id>https://y1ran.github.io/</id>
   
   <author>
@@ -17,27 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>分解质因数</title>
-    <link href="https://y1ran.github.io/2022/04/16/fen-jie-zhi-yin-shu/"/>
-    <id>https://y1ran.github.io/2022/04/16/fen-jie-zhi-yin-shu/</id>
-    <published>2022-04-15T16:00:00.000Z</published>
-    <updated>2022-04-25T05:08:24.479Z</updated>
+    <title>一点小感想</title>
+    <link href="https://y1ran.github.io/2022/05/01/yi-dian-xiao-gan-xiang/"/>
+    <id>https://y1ran.github.io/2022/05/01/yi-dian-xiao-gan-xiang/</id>
+    <published>2022-04-30T16:00:00.000Z</published>
+    <updated>2022-05-01T13:36:46.241Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;这是我的第一篇博客，想了很久也不知道该发些什么。像我这种三年没敲代码的小蒟蒻，最近做的”康复训练“实在是不够格。前几周数学老师留了几页数学书上的题，有一道是这样的：”使用信息技术手段进行试验：尝试在复数集中对实系数多项式进行因式分解，观察并记录所发现的规律。”（这道题在必修</summary>
+    <summary type="html">&lt;h4 id=&quot;一点小感想&quot;&gt;&lt;a href=&quot;#一点小感想&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
     
-    <category term="C++" scheme="https://y1ran.github.io/tags/C/"/>
-    
-    <category term="Python" scheme="https://y1ran.github.io/tags/Python/"/>
+    <category term="随笔" scheme="https://y1ran.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
