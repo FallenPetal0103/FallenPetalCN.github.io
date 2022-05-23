@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>YiRan&#39;s Home</title>
+  <title>Y1Ran&#39;s Home</title>
   
   <subtitle>Just Do It</subtitle>
   <link href="https://y1ran.github.io/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://y1ran.github.io/</id>
   
   <author>
-    <name>YiRan</name>
+    <name>Y1Ran</name>
     
   </author>
   
